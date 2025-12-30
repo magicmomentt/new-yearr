@@ -1,32 +1,32 @@
-// Year descriptions - customize these with your own memories!
+// وصف السنوات - خصصها بذكرياتك بالعامية المصرية
 const yearDescriptions = {
     2020: {
-        title: "2020 - The Beginning ✨",
-        text: "This is where our beautiful story began. The year we first met, first smiled at each other, and first realized that something magical was happening between us. Every love story is beautiful, but ours became my favorite."
+        title: "2020 - البداية ✨",
+        text: "السنة دي بدأت حكايتنا الحلوة. اتقابلنا لأول مرة، ضحكنا مع بعض، وحسينا بحاجة سحرية. كل قصص الحب حلوة، بس قصتنا بقيت المفضلة عندي."
     },
     2021: {
-        title: "2021 - Growing Together 🌸",
-        text: "We learned so much about each other this year. Through every laugh, every conversation, every moment shared, our bond grew stronger. You became my best friend, my confidant, and my greatest adventure."
+        title: "2021 - كبرنا سوا 🌸",
+        text: "السنة دي اتعلمنا عن بعض حاجات كتير. كل ضحكة وكل كلام وكل لحظة قضيناها مع بعض، رابطتنا بقيت أقوى. بقيت أكتر حد بحبه وصاحبي وسري ومغامرتي."
     },
     2022: {
-        title: "2022 - Building Memories 💫",
-        text: "This year was filled with unforgettable moments. We created memories that will last a lifetime - spontaneous adventures, quiet evenings, and everything in between. With you, every ordinary day became extraordinary."
+        title: "2022 - صنعنا ذكريات 💫",
+        text: "السنة دي مليانة لحظات مش هتتنسي. عملنا مغامرات عفوية، أمسيات هادية، وكل حاجة حلوة مع بعض. معاك كل يوم عادي بقى مميز."
     },
     2023: {
-        title: "2023 - Deeper Love 💖",
-        text: "Our love deepened in ways I never knew possible. We learned to weather storms together and celebrate sunshine even brighter. You showed me what true partnership means, and I fell in love with you all over again."
+        title: "2023 - حبنا اتعمق 💖",
+        text: "حبنا بقي أعمق بكتير. اتعلمنا نواجه أي حاجة سوا ونفرح بأيامنا أكتر. وريتني يعني إيه شراكة حقيقية، ووقعت في حبك من الأول."
     },
     2024: {
-        title: "2024 - Unbreakable Bond 💕",
-        text: "This year proved that our love is unbreakable. Through challenges and triumphs, we stood together. Every day with you is a gift, and I cherish how far we've come. You are my home, my heart, my everything."
+        title: "2024 - رابطتنا ما تتكسرش 💕",
+        text: "السنة دي أثبتت إن حبنا ما بيتكسرش. في كل تحدي وفي كل نجاح، وقفنا جنب بعض. كل يوم معاك هدية، وأنا مبسوط بكل اللي عديته معاك. انت كل حاجة عندي."
     },
     2025: {
-        title: "2025 - Present & Precious 🌟",
-        text: "Here we are, still writing our story together. This year reminds me why I choose you every single day. Your love is the greatest blessing in my life, and I'm grateful for every moment we share. Here's to the beautiful present!"
+        title: "2025 - دلوقتي الثمين 🌟",
+        text: "لسه بنكتب حكايتنا سوا. السنة دي بتفكرني ليه باختارك كل يوم. حبك أحلى حاجة في حياتي، ومبسوط بكل لحظة معاك."
     },
     2026: {
-        title: "2026 - Our Future Awaits ⭐",
-        text: "This star is waiting to be lit... A new year of adventures, dreams, and love is on the horizon. I can't wait to create more beautiful memories with you. The best is yet to come, my love! 💫"
+        title: "2026 - المستقبل مستني ⭐",
+        text: "النجمة دي مستنية تلمع... سنة جديدة من المغامرات والأحلام والحب. مش قادر أستنى نخلق ذكريات أكتر سوا. الأفضل لسه ما جهش يا حبي! 💫"
     }
 };
 
@@ -61,7 +61,7 @@ function createFloatingHeart(x, y) {
     heart.style.left = x + 'px';
     heart.style.top = y + 'px';
     document.body.appendChild(heart);
-    
+
     setTimeout(() => {
         heart.remove();
     }, 4000);
@@ -72,12 +72,12 @@ document.querySelectorAll('.star-item').forEach(star => {
     star.addEventListener('click', (e) => {
         const year = star.dataset.year;
         const data = yearDescriptions[year];
-        
+
         if (data) {
             descriptionYear.textContent = data.title;
             descriptionText.textContent = data.text;
             yearDescription.classList.add('active');
-            
+
             // Create floating hearts
             for (let i = 0; i < 5; i++) {
                 setTimeout(() => {
@@ -125,7 +125,7 @@ function randomFloatingHearts() {
 document.addEventListener('DOMContentLoaded', () => {
     createBackgroundStars();
     randomFloatingHearts();
-    
+
     // Add entrance animation delay to stars
     document.querySelectorAll('.star-item').forEach((star, index) => {
         star.style.opacity = '0';
